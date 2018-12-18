@@ -48,6 +48,9 @@ public class Chatbot {
         else if(statement.contains("What is the answer to life, the universe, and everything?")){
             response = "I don\'t know, what's the ultimate question to assosiate the ultimate answer?";
         }
+        else if(statement.contains("Form Voltron!")){
+            VoltronEasterEgg.main(new String[]{});
+        }
         else
         {
             response = getRandomResponse();

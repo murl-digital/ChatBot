@@ -25,7 +25,7 @@ public class ChatBotGUI extends PApplet {
         cp5.addBang("Submit").setPosition(920, 520).setSize(40, 20);
         myTextarea = cp5.addTextarea("txt").setPosition(0,0).setSize(220,500).setLineHeight(14)
                 .setColorBackground(color(0,100)).setColorForeground(color(255,100))
-                .scroll(1).hideScrollbar();
+                .scroll(1);
         chat = new Chatbot();
         s = myTextarea.getText();
         s += chat.getGreeting()+"\n";
