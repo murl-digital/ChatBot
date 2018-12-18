@@ -21,7 +21,7 @@ public class ChatBotGUI extends PApplet {
     public void setup() {
         cp5 = new ControlP5(this);
         background(0);
-        myTextfield = cp5.addTextfield("input").setPosition(0, 500).setSize(920, 20).setAutoClear(true);
+        myTextfield = cp5.addTextfield("input").setPosition(0, 500).setSize(920, 20).setAutoClear(false);
         cp5.addBang("Submit").setPosition(920, 500).setSize(40, 20);
         myTextarea = cp5.addTextarea("txt").setPosition(0,0).setSize(220,500).setLineHeight(14)
                 .setColorBackground(color(0,100)).setColorForeground(color(255,100))
@@ -49,6 +49,7 @@ public class ChatBotGUI extends PApplet {
         ChatBotGUI front = new ChatBotGUI();
         PApplet.runSketch(processingArgs, front);
         System.out.println();
-        System.out.print("Chatbot started!");
+        System.out.println("Chatbot started!");
+        System.out.println("==========================================\n"+"\tAP CS A Final project: The ChatBot\n"+"\tGraphical Frontend: JoeSorensen\n"+"\tChatBot Code: Mikerific + JoeSorensen\n"+"Nerdy References: Literally everyone in the project\n"+"==========================================");
     }
 }
