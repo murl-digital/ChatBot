@@ -43,7 +43,7 @@ public class ChatBotGUI extends PApplet {
         }
     }
 
-    private void Submit(){
+    private void Submit() {
         String input = cp5.get(Textfield.class, "input").getText();
         String response = chat.getResponse(cp5.get(Textfield.class, "input").getText());
         myTextfield.clear();
@@ -56,6 +56,6 @@ public class ChatBotGUI extends PApplet {
         PApplet.runSketch(processingArgs, front);
         System.out.println();
         System.out.println("Chatbot started!");
-        System.out.println("==========================================\n"+"\tAP CSA Final Project: Magpie ChatBot\n"+"\tMain Graphical Frontend: JoeSorensen\n"+"\tExtra Graphical Frontend: Mikerific\n"+"\tChatBot Code: Mikerific, and JoeSorensen\n"+"Nerdy References: Everyone!\n"+"==========================================");
+        System.out.println("==========================================\n"+"   AP CSA Final Project: Magpie ChatBot\n"+"   Main Graphical Frontend: JoeSorensen\n"+"   Extra Graphical Frontend: Mikerific\n"+" ChatBot Code: Mikerific, and JoeSorensen\n"+"\t   Nerdy References: Everyone!\n"+"==========================================");
     }
 }
