@@ -2,34 +2,53 @@ package com.JoeSorensen;
 
 import processing.core.PApplet;
 
-import java.util.*;
+import controlP5.*;
+
 
 public class ChatBotGUI extends PApplet {
 
+    private static String[] processingArgs = {"ChatBotGUI"};
+    private ControlP5 cp5;
+    private Textarea myTextarea;
+    private Textfield myTextfield;
+    private Chatbot chat;
+    private String s;
+
     public void settings() {
-        size(500, 500);
+        size(960, 540);
     }
 
     public void setup() {
+        cp5 = new ControlP5(this);
+        background(0);
+        myTextfield = cp5.addTextfield("input").setPosition(0, 500).setSize(920, 20).setAutoClear(true);
+        cp5.addBang("Submit").setPosition(920, 500).setSize(40, 20);
+        myTextarea = cp5.addTextarea("txt").setPosition(0,0).setSize(220,500).setLineHeight(14)
+                .setColorBackground(color(0,100)).setColorForeground(color(255,100))
+                .scroll(1).hideScrollbar();
+        chat = new Chatbot();
+        s = myTextarea.getText();
+        s += chat.getGreeting()+"\n";
+        myTextarea.setText(s);
+    }
+
+
+    public void draw() {
         background(0);
     }
 
-    public void draw() {
-
+    public void Submit(){
+        String input = cp5.get(Textfield.class, "input").getText();
+        String response = chat.getResponse(cp5.get(Textfield.class, "input").getText());
+        myTextfield.clear();
+        s += input+"\n"+response+"\n";
+        myTextarea.setText(s);
     }
 
     public static void main(String[] args) {
-        String[] processingArgs = {"ChatBotGUI"};
         ChatBotGUI front = new ChatBotGUI();
         PApplet.runSketch(processingArgs, front);
-        Chatbot chat = new Chatbot();
-        System.out.println(chat.getGreeting());
-        Scanner in = new Scanner(System.in);
-        String statement = in.nextLine();
-        while (!statement.equals("Bye")) {
-            System.out.println(chat.getResponse(statement));
-            statement = in.nextLine();
-            break;
-        }
+        System.out.println();
+        System.out.print("Chatbot started!");
     }
 }
