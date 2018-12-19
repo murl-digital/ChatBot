@@ -23,7 +23,7 @@ public class ChatBotGUI extends PApplet {
         background(0);
         myTextfield = cp5.addTextfield("input").setPosition(0, 520).setSize(920, 20).setAutoClear(false);
         cp5.addBang("Submit").setPosition(920, 520).setSize(40, 20);
-        myTextarea = cp5.addTextarea("txt").setPosition(0,0).setSize(220,500).setLineHeight(14)
+        myTextarea = cp5.addTextarea("txt").setPosition(0,0).setSize(960,520).setLineHeight(14)
                 .setColorBackground(color(0,100)).setColorForeground(color(255,100))
                 .scroll(1);
         chat = new Chatbot();

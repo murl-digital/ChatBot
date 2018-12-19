@@ -20,7 +20,7 @@ public class Chatbot {
      */
     public String getResponse(String statement)
     {
-        String response = "";
+        String response;
         if (statement.length() == 0)
         {
             response = "Say something, please.";
@@ -36,14 +36,15 @@ public class Chatbot {
         {
             response = "Tell me more about your family.";
         }
+        else if(statement.contains("How many roads must a man walk down?"))
+        {
+            response = "42";
+        }
         else if(statement.contains("What is the airspeed velocity of an unladen swallow?")){
             response = "What do you mean? An African or European swallow?";
         }
         else if(statement.contains("What is the answer to life, the universe, and everything?")){
-            response = "42";
-        }
-        else if(statement.contains("Form Voltron!")){
-            VoltronEasterEgg.main(new String[]{});
+            response = "I don\'t know, what's the ultimate question to assosiate the ultimate answer?";
         }
         else
         {
