@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ChatBot:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ChatBot_jar</output-path>
+    <root id="archive" name="ChatBot.jar">
+      <element id="module-output" name="ChatBot" />
+      <element id="library" level="project" name="library" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/com/JoeSorensen/controlP5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/com/JoeSorensen/core.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

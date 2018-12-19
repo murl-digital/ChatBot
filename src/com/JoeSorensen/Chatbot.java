@@ -1,5 +1,7 @@
 package com.JoeSorensen;
 
+import com.google.code.chatterbotapi.*;
+
 public class Chatbot {
     /**
      * Get a default greeting
