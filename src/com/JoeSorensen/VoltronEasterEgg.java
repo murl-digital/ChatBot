@@ -9,9 +9,6 @@ import processing.core.PImage;
 public class VoltronEasterEgg extends PApplet {
 
     private static String[] processingArgs = {"Voltron"};
-    private ControlP5 cp5;
-    private Textarea myTextarea;
-    private Textfield myTextfield;
     private PImage voltron;
 
     public void settings(){size(1920, 1080);}

@@ -1,7 +1,5 @@
 package com.JoeSorensen;
 
-import java.util.*;
-
 public class Chatbot {
     /**
      * Get a default greeting
