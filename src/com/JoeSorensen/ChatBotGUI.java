@@ -47,6 +47,10 @@ public class ChatBotGUI extends PApplet {
         String input = cp5.get(Textfield.class, "input").getText();
         String response = chat.getResponse(cp5.get(Textfield.class, "input").getText());
         myTextfield.clear();
+        if(input.contains("Bye"))
+            exit();
+        if(input.contains("Satan"))
+            System.exit(666);
         s += input+"\n"+response+"\n";
         myTextarea.setText(s);
     }
