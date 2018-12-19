@@ -2,25 +2,24 @@ package com.JoeSorensen;
 
 import processing.core.PApplet;
 
-import controlP5.*;
-
-import processing.core.PImage;
+import processing.core.PShape;
 
 public class VoltronEasterEgg extends PApplet {
 
     private static String[] processingArgs = {"Voltron"};
-    private PImage voltron;
+    private PShape voltron;
 
     public void settings(){size(1920, 1080);}
 
     public void setup() {
-        String src = "http://www.voltron.com/files/images/hi-res/landing/history_classicvoltron.png";
-        voltron = loadImage(src, "png");
+        background(0);
+        text("...", 960, 540, 200, 200);
+        voltron = loadShape("src/com/JoeSorensen/history_classicvoltron.svg");
     }
 
     public void draw() {
         background(0);
-        image(voltron, 453, 0, 507, 853);
+        shape(voltron, 453, 0, 507, 853);
     }
 
     @Override public void exit(){
