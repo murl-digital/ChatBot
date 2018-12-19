@@ -10,5 +10,10 @@
     <orderEntry type="library" name="core" level="project" />
     <orderEntry type="library" name="controlP5" level="project" />
     <orderEntry type="library" name="ChatterBot" level="project" />
+    <orderEntry type="library" name="okhttp-3.12.0" level="project" />
+    <orderEntry type="library" name="okio-2.1.0" level="project" />
+    <orderEntry type="library" name="annotations-13.0" level="project" />
+    <orderEntry type="library" name="kotlin-stdlib-1.3.11" level="project" />
+    <orderEntry type="library" name="kotlin-stdlib-common-1.3.11" level="project" />
   </component>
 </module>

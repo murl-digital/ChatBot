@@ -1,6 +1,11 @@
 package com.JoeSorensen;
 
-import com.google.code.chatterbotapi.*;
+import com.google.code.chatterbotapi.ChatterBot;
+import com.google.code.chatterbotapi.ChatterBotFactory;
+import com.google.code.chatterbotapi.ChatterBotSession;
+import com.google.code.chatterbotapi.ChatterBotType;
+
+import java.util.Random;
 
 public class Chatbot {
     /**
@@ -8,8 +13,17 @@ public class Chatbot {
      *
      * @return a greeting
      */
+    ChatterBotSession botsession;
     public String getGreeting() {
-        return "Hello, let's talk.";
+        try {
+            ChatterBotFactory factory = new ChatterBotFactory();
+            ChatterBot bot = factory.create(ChatterBotType.CLEVERBOT);
+            //ChatterBot bot = factory.create(ChatterBotType.PANDORABOTS, "b0dafd24ee35a477");
+            botsession = bot.createSession();
+            return "Hello, let's talk.";
+        } catch(Exception e) {
+            return "Hello, let's talk.";
+        }
     }
 
     /**
@@ -25,29 +39,13 @@ public class Chatbot {
         if (statement.length() == 0)
         {
             response = "Say something, please.";
-        }
-        else if (findKeyword(statement, "no") >= 0)
-        {
-            response = "Why so negative?";
-        }
-        else if (findKeyword(statement, "mother") >= 0
-                || findKeyword(statement, "father") >= 0
-                || findKeyword(statement, "sister") >= 0
-                || findKeyword(statement, "brother") >= 0)
-        {
-            response = "Tell me more about your family.";
-        }
-        else if(statement.contains("How many roads must a man walk down?"))
-        {
+        } else if(statement.contains("What is the answer to life, the universe, and everything?")) {
             response = "42";
-        }
-        else if(statement.contains("What is the airspeed velocity of an unladen swallow?")){
+        } else if(statement.contains("What is the airspeed velocity of an unladen swallow?")){
             response = "What do you mean? An African or European swallow?";
-        }
-        else if(statement.contains("Form Voltron!")){
+        } else if(statement.contains("Form Voltron!")){
             VoltronEasterEgg.main(new String[]{});
-        }
-        else {
+        } else {
             response = getRandomResponse(statement);
         }
         return response;
@@ -141,7 +139,17 @@ public class Chatbot {
      *
      * @return a non-committal string
      */
+    private String[] randomResponses = {"Interesting, tell me more",
+            "Hmmm.",
+            "Do you really think so?",
+            "You don't say."
+    };
     private String getRandomResponse(String s) {
-
+        try {
+            return botsession.think(s);
+        } catch(Exception e) {
+            Random r = new Random();
+            return randomResponses [r.nextInt(randomResponses.length)];
+        }
     }
 }
