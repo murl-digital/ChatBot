@@ -17,8 +17,8 @@ public class Chatbot {
     public String getGreeting() {
         try {
             ChatterBotFactory factory = new ChatterBotFactory();
-            ChatterBot bot = factory.create(ChatterBotType.CLEVERBOT);
-            //ChatterBot bot = factory.create(ChatterBotType.PANDORABOTS, "b0dafd24ee35a477");
+            //ChatterBot bot = factory.create(ChatterBotType.CLEVERBOT);
+            ChatterBot bot = factory.create(ChatterBotType.PANDORABOTS, "b0dafd24ee35a477");
             botsession = bot.createSession();
             return "Hello, let's talk.";
         } catch(Exception e) {
