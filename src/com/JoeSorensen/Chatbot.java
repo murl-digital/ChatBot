@@ -1,7 +1,5 @@
 package com.JoeSorensen;
 
-import com.JoeSorensen.chatterbotapi.*;
-
 public class Chatbot {
     /**
      * Get a default greeting
@@ -20,7 +18,7 @@ public class Chatbot {
      * @return a response based on the rules given
      */
     public String getResponse(String statement) {
-        
+
         String response = null;
         if (statement.length() == 0)
         {
