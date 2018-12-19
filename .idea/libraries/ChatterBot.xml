@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="ChatterBot">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src/com/JoeSorensen/chatterbotapi/ChatterBot.java" />
+      <root url="file://$PROJECT_DIR$/src/com/JoeSorensen/chatterbotapi/ChatterBotType.java" />
+      <root url="file://$PROJECT_DIR$/src/com/JoeSorensen/chatterbotapi/ChatterBotFactory.java" />
+      <root url="file://$PROJECT_DIR$/src/com/JoeSorensen/chatterbotapi/Utils.java" />
+      <root url="file://$PROJECT_DIR$/src/com/JoeSorensen/chatterbotapi/Pandorabots.java" />
+      <root url="file://$PROJECT_DIR$/src/com/JoeSorensen/chatterbotapi/ChatterBotSession.java" />
+      <root url="file://$PROJECT_DIR$/src/com/JoeSorensen/chatterbotapi/ChatterBotThought.java" />
+      <root url="file://$PROJECT_DIR$/src/com/JoeSorensen/chatterbotapi/Cleverbot.java" />
+    </SOURCES>
+  </library>
+</component>

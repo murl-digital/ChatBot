@@ -2,6 +2,7 @@
   <library name="core">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/src/com/JoeSorensen/core.jar!/" />
+      <root url="file://$PROJECT_DIR$/src/com/JoeSorensen/chatterbotapi" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

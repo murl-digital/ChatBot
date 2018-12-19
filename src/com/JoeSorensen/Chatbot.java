@@ -1,13 +1,14 @@
 package com.JoeSorensen;
 
+import com.JoeSorensen.chatterbotapi.*;
+
 public class Chatbot {
     /**
      * Get a default greeting
      *
      * @return a greeting
      */
-    public String getGreeting()
-    {
+    public String getGreeting() {
         return "Hello, let's talk.";
     }
 
@@ -18,8 +19,8 @@ public class Chatbot {
      *            the user statement
      * @return a response based on the rules given
      */
-    public String getResponse(String statement)
-    {
+    public String getResponse(String statement) {
+        
         String response = null;
         if (statement.length() == 0)
         {
@@ -46,9 +47,8 @@ public class Chatbot {
         else if(statement.contains("Form Voltron!")){
             VoltronEasterEgg.main(new String[]{});
         }
-        else
-        {
-            response = getRandomResponse();
+        else {
+            response = getRandomResponse(statement);
         }
         return response;
     }
@@ -141,30 +141,7 @@ public class Chatbot {
      *
      * @return a non-committal string
      */
-    private String getRandomResponse()
-    {
-        final int NUMBER_OF_RESPONSES = 4;
-        double r = Math.random();
-        int whichResponse = (int) (r * NUMBER_OF_RESPONSES);
-        String response = "";
+    private String getRandomResponse(String s) {
 
-        if (whichResponse == 0)
-        {
-            response = "Interesting, tell me more.";
-        }
-        else if (whichResponse == 1)
-        {
-            response = "Hmmm.";
-        }
-        else if (whichResponse == 2)
-        {
-            response = "Do you really think so?";
-        }
-        else if (whichResponse == 3)
-        {
-            response = "You don't say.";
-        }
-
-        return response;
     }
 }
