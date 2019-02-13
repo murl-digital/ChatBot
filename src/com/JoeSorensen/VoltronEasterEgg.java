@@ -14,7 +14,7 @@ public class VoltronEasterEgg extends PApplet {
     public void setup() {
         background(0);
         text("...", 960, 540, 200, 200);
-        voltron = loadShape("src/com/JoeSorensen/history_classicvoltron.svg");
+        voltron = loadShape("com/JoeSorensen/history_classicvoltron.svg");
     }
 
     public void draw() {

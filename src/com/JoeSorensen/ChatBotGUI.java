@@ -45,12 +45,12 @@ public class ChatBotGUI extends PApplet {
 
     private void Submit() {
         String input = cp5.get(Textfield.class, "input").getText();
-        String response = chat.getResponse(cp5.get(Textfield.class, "input").getText());
         myTextfield.clear();
-        if(input.trim().toLowerCase().contains("bye"))
-            exit();
-        if(input.trim().toLowerCase().contains("satan"))
+        if(input.contains("Bye"))
+            System.exit(0);
+        if(input.contains("Satan"))
             System.exit(666);
+        String response = chat.getResponse(input);
         s += input+"\n"+response+"\n";
         myTextarea.setText(s);
     }
